@@ -13,7 +13,13 @@ import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.apache.zookeeper.data.Stat;
 
-
+/**
+ * zk的watcher只能对父节点的变化进行监听，
+ *  而对子节点只有一种状态： childrennodechanged 而对子节点的增删改没有做监听 
+ *  再就是watcher 监听是一次性，每次都必须要重新new或者
+ * @author Administrator
+ *
+ */
 public class ZooKeeperWacther implements Watcher{
 	
 	/** 定义原子变量**/
