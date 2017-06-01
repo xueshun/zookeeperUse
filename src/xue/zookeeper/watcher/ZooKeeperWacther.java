@@ -1,12 +1,10 @@
 package xue.zookeeper.watcher;
 
-import java.io.IOException;
+
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
-import org.apache.curator.framework.api.CreateModable;
 import org.apache.zookeeper.CreateMode;
-import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
@@ -14,7 +12,7 @@ import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.apache.zookeeper.data.Stat;
-import org.apache.zookeeper.proto.GetChildren2Request;
+
 
 public class ZooKeeperWacther implements Watcher{
 	
@@ -271,7 +269,7 @@ public class ZooKeeperWacther implements Watcher{
 		
 		Thread.sleep(5000);
 		//清理节点
-		zkWacth.deleteAllTestPath();
+		/*zkWacth.deleteAllTestPath();*/
 		Thread.sleep(1000);
 		zkWacth.releaseConnection();
 	}
