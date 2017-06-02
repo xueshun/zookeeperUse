@@ -50,6 +50,8 @@ public class CuratorBase {
 		//deletingChildrenIfNeeded() 递归删除 不加上删除会抛异常
 		//cf.delete().guaranteed().deletingChildrenIfNeeded().forPath("/super");
 		
+		
+		
 		//6 读取节点
 //		String ret1 = new String(cf.getData().forPath("/super/c1"));
 //		System.out.println(ret1);
