@@ -6,6 +6,12 @@ import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 
+/**
+ * 当Client与zookeeper失去连接后重新连接后会把重新连接
+ * 	并监听节点，如果节点下有子节点，回把节点上一步的操作，重新做一次，如（读取节点的数据），达到重新注册的功能
+ * @author Administrator
+ *
+ */
 public class Test {
 	
 	static final String CONNECT_ADDR = "192.168.1.191:2181,"
