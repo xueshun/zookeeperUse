@@ -37,7 +37,7 @@ public class CuratorBarrier01 {
 								.retryPolicy(retryPolicy)
 								.build();
 						cf.start();
-							
+						
 						/**
 						 * 参数一 ： 连接工程
 						 * 参数二 ： 连接节点
